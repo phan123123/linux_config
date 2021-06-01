@@ -31,8 +31,7 @@ Config(){
     echo 'set number relativenumber' >> $config #init line number
     echo 'set clipboard+=unnamed,unnamedplus' >> $config #init the clipboard for copy-parse with terminal
     echo 'set hlsearch' >> $config #init hightlight the search
-    
-    
+    echo 'set autoindent' >> $config #init indent    
     echo 'Config Done !!'
     echo "#########################"
 }
