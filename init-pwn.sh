@@ -10,7 +10,7 @@ pip3 install pwntools
 
 #install ROPgadget
 pip3 install capstone
-git clone https://github.com/JonathanSalwan/ROPgadget ~
+git clone https://github.com/JonathanSalwan/ROPgadget ~/ROPgadget
 sudo python3 ~/ROPgadget/setup.py install
 
 #install checksec
