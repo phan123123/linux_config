@@ -17,6 +17,10 @@ sudo python3 ~/ROPgadget/setup.py install
 sudo apt install ruby -y
 sudo gem install one_gadget
 
+#install main_arena
+sudo cp ./scripts/main_arena /usr/bin/main_arena
+sudo chmod o+x /usr/bin/main_arena
+
 #install checksec
 sudo apt-get install checksec -y
 
