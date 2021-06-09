@@ -13,6 +13,10 @@ pip3 install capstone
 git clone https://github.com/JonathanSalwan/ROPgadget ~/ROPgadget
 sudo python3 ~/ROPgadget/setup.py install
 
+#install one_gadget
+sudo apt install ruby -y
+sudo gem install one_gadget
+
 #install checksec
 sudo apt-get install checksec -y
 
