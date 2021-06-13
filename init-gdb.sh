@@ -94,3 +94,7 @@ echo "[-] Permission denied"
 sudo cp gdb-* /usr/bin/
 sudo rm gdb-*
 echo "[+] Done"
+
+echo "Install extend for GEF"
+git clone https://github.com/hugsy/gef-extras ~/gef-extras
+gdb-gef -ex "gef config gef.extra_plugins_dir ~/gef-extras/scripts" -ex "gef config pcustom.struct_path ~/gef-extras/structs" -ex "gef config syscall-args.path ~/gef-extras/syscall-tables" -ex "gef config context.libc_args True" -ex "gef config context.libc_args_path ~/gef-extras/glibc-function-args" -ex "gef save" -ex "q"
