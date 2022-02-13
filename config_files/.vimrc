@@ -38,6 +38,15 @@ call plug#end()
 " => Config for plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowHidden=1
+
+" NERDTree refresh
+function NERDTreeToggleAndRefresh()
+  :NERDTreeToggle
+  if g:NERDTree.IsOpen()
+    :NERDTreeRefreshRoot
+  endif
+endfunction
+
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
@@ -63,4 +72,4 @@ set autoindent                      "init indent
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Binding keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <F5> :NERDTreeToggle<CR>
+nnoremap <silent> <F5> :call NERDTreeToggleAndRefresh()<CR>
